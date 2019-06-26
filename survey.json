@@ -1,0 +1,645 @@
+{
+    "pages": [
+     {
+      "name": "Use Case",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "Use Case Description1",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "question1",
+          "title": "How would you classify your use case or workload?",
+          "isRequired": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "PoC or Prototype"
+           },
+           {
+            "value": "item2",
+            "text": "MVP"
+           },
+           {
+            "value": "item3",
+            "text": "Pilot or Product"
+           }
+          ]
+         },
+         {
+          "type": "comment",
+          "name": "question2",
+          "visible": false,
+          "visibleIf": "{question1} = \"item1\"",
+          "title": "Please enter a short description of what you want to proof/test!",
+          "isRequired": true
+         },
+         {
+          "type": "comment",
+          "name": "question3",
+          "visibleIf": "{question1} = \"item2\"",
+          "title": "Please enter a short description of what you want to deliver!",
+          "isRequired": true
+         },
+         {
+          "type": "comment",
+          "name": "question4",
+          "visible": false,
+          "visibleIf": "{question1} = \"item3\"",
+          "title": "Please enter a short description of the final/ongoing product!",
+          "isRequired": true
+         }
+        ],
+        "title": "Use Case Description"
+       }
+      ]
+     },
+     {
+      "name": "Rate your use case or workload!",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel4",
+        "elements": [
+         {
+          "type": "rating",
+          "name": "question5",
+          "title": "Rate the complexity of your use case or workload!",
+          "isRequired": true,
+          "rateMax": 4
+         },
+         {
+          "type": "rating",
+          "name": "question6",
+          "title": "Rate the risk of your use case or workload!",
+          "isRequired": true,
+          "rateMax": 4
+         },
+         {
+          "type": "dropdown",
+          "name": "question8",
+          "title": "Rate the business criticality of your use case or workload!",
+          "isRequired": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Business Supporting (1)"
+           },
+           {
+            "value": "item2",
+            "text": "Business Core (2)"
+           },
+           {
+            "value": "item3",
+            "text": "Business Essential (3)"
+           },
+           {
+            "value": "item4",
+            "text": "Mission Critical (4)"
+           }
+          ]
+         }
+        ],
+        "title": "Rate your use case or workload! (1 Lowest / 4 Highest)"
+       }
+      ]
+     },
+     {
+      "name": "Migration / Service Model",
+      "elements": [
+       {
+        "type": "radiogroup",
+        "name": "question7",
+        "title": "Whats your migration strategy?",
+        "isRequired": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "(Retain)"
+         },
+         {
+          "value": "item2",
+          "text": "Rehost"
+         },
+         {
+          "value": "item3",
+          "text": "Refactor"
+         },
+         {
+          "value": "item4",
+          "text": "Rearchitect"
+         },
+         {
+          "value": "item5",
+          "text": "Rebuild"
+         },
+         {
+          "value": "item6",
+          "text": "Replace"
+         },
+         {
+          "value": "item7",
+          "text": "Retire"
+         },
+         {
+          "value": "item8",
+          "text": "Hybrid"
+         }
+        ],
+        "otherText": "Hybrid"
+       },
+       {
+        "type": "checkbox",
+        "name": "question11",
+        "title": "What service model do you what choose? (Multiple choices allowed)",
+        "isRequired": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Infrastructure as a Service (IaaS)"
+         },
+         {
+          "value": "item2",
+          "text": "Platform as a Service (PaaS)"
+         },
+         {
+          "value": "item3",
+          "text": "Software as a Service (SaaS)"
+         }
+        ]
+       }
+      ],
+      "title": "Migration / Service Model"
+     },
+     {
+      "name": "Accountability",
+      "elements": [
+       {
+        "type": "text",
+        "name": "question10",
+        "title": "Name of the Business Unit/Group",
+        "isRequired": true
+       },
+       {
+        "type": "text",
+        "name": "question12",
+        "title": "Name the (Business) Application/Use Case Sponsor (Enter the mail address!)",
+        "isRequired": true
+       },
+       {
+        "type": "text",
+        "name": "question13",
+        "title": "Name the (Technical) Application/Use Case Owner  (Enter the mail address!)",
+        "isRequired": true
+       },
+       {
+        "type": "radiogroup",
+        "name": "question18",
+        "title": "Who is implementing the solution?",
+        "isRequired": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Internal Implementation Team"
+         },
+         {
+          "value": "item2",
+          "text": "External Implementation Team"
+         },
+         {
+          "value": "item3",
+          "text": "Mixed Implementation Team"
+         }
+        ]
+       }
+      ],
+      "title": "Accountability"
+     },
+     {
+      "name": "Commercial/Billing",
+      "elements": [
+       {
+        "type": "text",
+        "name": "question14",
+        "title": "Cost Center",
+        "isRequired": true
+       },
+       {
+        "type": "text",
+        "name": "question17",
+        "title": "Name of the billing contact (Enter the mail address!)",
+        "isRequired": true
+       }
+      ],
+      "title": "Commercial/Billing",
+      "description": "Make sure internal billing has been clarified."
+     },
+     {
+      "name": "Responsibility",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "Be aware of the following!",
+        "elements": [
+         {
+          "type": "html",
+          "name": "question16",
+          "html": "<h4 style=\"color: #5e9ca0;\">Cloud Design Pattern</h4>\n<a href=\"https://docs.microsoft.com/en-us/azure/architecture/patterns/\">Visit the Cloud Design Patterns</a><br>\n<a href=\"https://docs.microsoft.com/en-us/azure/architecture/guide/design-principles/\">Visit the 10 design principles for Azure applications</a>\n\n<h4 style=\"color: #5e9ca0;\">Cloud Security Requirements</h4>\n<a href=\"https://docs.microsoft.com/en-us/azure/security/security-best-practices-and-patterns\">Visit the Azure security best practices and patterns</a><br>\n<a href=\"https://docs.microsoft.com/en-us/azure/security/security-white-papers/\">Visit the Azure Security white papers</a>\n\n<h4 style=\"color: #5e9ca0;\">External/regulatory compliance requirements</h4>\n<a href=\"https://docs.microsoft.com/en-us/azure/security/blueprints/pcidss-iaaswa-overview\">Visit the IaaS PCI DSS Sample App</a>"
+         }, 
+         {
+          "type": "signaturepad",
+          "name": "sign",
+          "title": "I acknowlege! (Sign here)"
+      }
+        ],
+        "title": "Be aware of the following!"
+       }
+      ],
+      "title": "Responsibility ",
+      "description": "Make sure the e.g. application owners are aware their responsibilities in the cloud."
+     },
+     {
+      "name": "Data Lifecylce Management",
+      "elements": [
+       {
+        "type": "dropdown",
+        "name": "question19",
+        "title": "Rate the data criticality of your use case or workload!",
+        "isRequired": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Non-business (1)"
+         },
+         {
+          "value": "item2",
+          "text": "Public (2)"
+         },
+         {
+          "value": "item3",
+          "text": "General (3)"
+         },
+         {
+          "value": "item4",
+          "text": "Confidential (4)"
+         },
+         {
+          "value": "item5",
+          "text": "Highly confidential (5)"
+         }
+        ]
+       },
+       {
+        "type": "dropdown",
+        "name": "question21",
+        "title": "Where is your data hosted?",
+        "isRequired": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "EU"
+         },
+         {
+          "value": "item2",
+          "text": "China"
+         },
+         {
+          "value": "item3",
+          "text": "US"
+         },
+         {
+          "value": "item4",
+          "text": "Canada"
+         },
+         {
+          "value": "item5",
+          "text": "Worldwide"
+         }
+        ],
+        "otherText": "Other"
+       },
+       {
+        "type": "panel",
+        "name": "panel1",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "question20",
+          "title": "Is your data GDPR relevant?",
+          "isRequired": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Yes"
+           },
+           {
+            "value": "item3",
+            "text": "No"
+           }
+          ]
+         }
+        ]
+       }
+      ],
+      "title": "Data Lifecylce Management",
+      "description": "Make sure there was a data classification."
+     },
+     {
+      "name": "Connectivity",
+      "elements": [
+       {
+        "type": "radiogroup",
+        "name": "question22",
+        "title": "No Connection required",
+        "isRequired": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "No Connection required (Island solution)"
+         },
+         {
+          "value": "item2",
+          "text": "Connection required"
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "panel2",
+        "elements": [
+         {
+          "type": "text",
+          "name": "question23",
+          "title": "Name system(s) that connection is required to!",
+          "isRequired": true
+         },
+         {
+          "type": "dropdown",
+          "name": "question24",
+          "title": "Name the highest business criticality of all connected system!",
+          "isRequired": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Business Supporting (1)"
+           },
+           {
+            "value": "item2",
+            "text": "Business Core (2)"
+           },
+           {
+            "value": "item3",
+            "text": "Business Essential (3)"
+           },
+           {
+            "value": "item4",
+            "text": "Mission Critical (4)"
+           }
+          ]
+         },
+         {
+          "type": "checkbox",
+          "name": "question25",
+          "title": "Name your prefered connetction method",
+          "isRequired": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "VPN - Connection (Azure to On premise) "
+           },
+           {
+            "value": "item2",
+            "text": "ExpressRoute - Connection (Azure to On premise)"
+           },
+           {
+            "value": "item3",
+            "text": "Peering - Connection (Azure to Azure)"
+           }
+          ]
+         }
+        ],
+        "visible": false,
+        "visibleIf": "{question22} = \"item2\""
+       }
+      ],
+      "title": "Connectivity",
+      "description": "Make sure the connectivity requirements are set."
+     },
+     {
+      "name": "Security",
+      "elements": [
+       {
+        "type": "radiogroup",
+        "name": "question26",
+        "title": "Monitoring and Logging approach",
+        "isRequired": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Managed Service/concept by CCoE"
+         },
+         {
+          "value": "item2",
+          "text": "Self Management Approach"
+         }
+        ]
+       },
+       {
+        "type": "radiogroup",
+        "name": "question9",
+        "title": "Threat and vulnerability management approach",
+        "isRequired": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Managed Service/concept by CCoE"
+         },
+         {
+          "value": "item2",
+          "text": "Self Management Approach"
+         }
+        ]
+       },
+       {
+        "type": "panel",
+        "name": "Encryption approach",
+        "elements": [
+         {
+          "type": "radiogroup",
+          "name": "question27",
+          "title": "In Rest (Azure Managed vs BYOK)",
+          "isRequired": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Managed Service/concept by CCoE"
+           },
+           {
+            "value": "item2",
+            "text": "Self Management Approach"
+           }
+          ]
+         },
+         {
+          "type": "radiogroup",
+          "name": "question28",
+          "title": "In Transit (e.g. HTTPS) ",
+          "isRequired": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Managed Service/concept by CCoE"
+           },
+           {
+            "value": "item2",
+            "text": "Self Management Approach"
+           }
+          ]
+         },
+         {
+          "type": "radiogroup",
+          "name": "question29",
+          "title": "In Use (e.g. Confidential Computing)",
+          "isRequired": true,
+          "choices": [
+           {
+            "value": "item1",
+            "text": "Managed Service/concept by CCoE"
+           },
+           {
+            "value": "item2",
+            "text": "Self Management Approach"
+           }
+          ]
+         }
+        ],
+        "title": "Encryption approach"
+       }
+      ],
+      "title": "Security",
+      "description": "Different requirements based on data and business criticality (Philosophy: Trust but Control)"
+     },
+     {
+      "name": "Identity Access Management",
+      "elements": [
+       {
+        "type": "radiogroup",
+        "name": "question30",
+        "title": "Who is implementing/developing the solution?",
+        "isRequired": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Internal Implementation Team"
+         },
+         {
+          "value": "item2",
+          "text": "External Implementation Team"
+         },
+         {
+          "value": "item3",
+          "text": "Mixed Implementation Team"
+         }
+        ]
+       },
+       {
+        "type": "radiogroup",
+        "name": "question32",
+        "title": "Who is administrating the solution?",
+        "isRequired": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Internal Implementation Team"
+         },
+         {
+          "value": "item2",
+          "text": "External Implementation Team"
+         },
+         {
+          "value": "item3",
+          "text": "Mixed Implementation Team"
+         }
+        ]
+       },
+       {
+        "type": "checkbox",
+        "name": "question31",
+        "title": "Circle of end users (Multiplice choices allowed!)",
+        "isRequired": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Internal"
+         },
+         {
+          "value": "item2",
+          "text": "External - Business 2 Customer (B2C)"
+         },
+         {
+          "value": "item3",
+          "text": "External - Business 2 Business (B2B)"
+         }
+        ]
+       },
+       {
+        "type": "checkbox",
+        "name": "question33",
+        "title": "RBAC Approach",
+        "isRequired": true,
+        "choices": [
+         {
+          "value": "item1",
+          "text": "Managed Service/concept by CCoE"
+         },
+         {
+          "value": "item2",
+          "text": "Self Management Approach"
+         }
+        ]
+       }
+      ],
+      "title": "Identity Access Management",
+      "description": "Make sure the baseline for IAM is set."
+     },
+     {
+      "name": "Outcome/Next Steps:",
+      "elements": [
+       {
+        "type": "panel",
+        "name": "panel3",
+        "elements": [
+         {
+          "type": "html",
+          "name": "question34",
+          "visibleIf": "{question27} = \"item2\" and {question19} = \"item1\" or {question19} = \"item2\"",
+          "html": "<h3 style=\"color: #5e9ca0;\">Write an encryption AT REST concept</h3>"
+         },
+         {
+          "type": "html",
+          "name": "question36",
+          "visibleIf": "{question28} = \"item2\"",
+          "html": "<h3 style=\"color: #5e9ca0;\">Write an encryption IN TRANSIT concept</h3>"
+         },
+         {
+          "type": "html",
+          "name": "question35",
+          "visibleIf": "{question29} = \"item2\"",
+          "html": "<h3 style=\"color: #5e9ca0;\">Write an encryption IN USE concept</h3>"
+         },
+         {
+          "type": "rating",
+          "name": "question37",
+          "title": "How would you rate this guide?"
+         }
+        ],
+        "title": "What do you need to do?"
+       }
+      ],
+      "title": "Outcome/Next Steps:",
+      "description": "What does the team need to do next? "
+     }
+    ],
+    "showTitle": false
+   }
