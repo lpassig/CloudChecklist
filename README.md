@@ -1,4 +1,4 @@
-# React quickstart boilerplate for SurveyJS: Survey Library and Survey Creator 
+# Azure Cloud Checklist based on  SurveyJS: Survey Library and Survey Creator 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
