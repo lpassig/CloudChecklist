@@ -5,7 +5,7 @@
   "dependencies": {
     "@azure/cosmos": "^2.1.4",
     "ace-builds": "^1.4.4",
-    "async": "^3.0.1",
+    "async": "^3.2.2",
     "azure-storage": "^2.10.3",
     "bootstrap": "^3.3.7",
     "jquery": "^3.3.1",
